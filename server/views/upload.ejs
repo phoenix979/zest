@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Upload your files</h2>
+<form action="/processFiles" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="resources">Select Resources File:</label>
+        <input type="file" name="resources" required>
+    </div>
+    
+    <div>
+        <label for="prowler">Select Prowler File:</label>
+        <input type="file" name="prowler" required>
+    </div>
+
+    <div>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+</body>
+</html>

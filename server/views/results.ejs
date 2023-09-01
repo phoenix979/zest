@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            vertical-align: top; /* Make content stick to the top */
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        h2 {
+            text-align: center; /* Centering the title */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Analysis Results</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Resource</th>
+            <th>Findings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% data.forEach(item => { %>
+            <tr>
+                <td><%= item.resource %></td>
+                <td>
+                    <ul>
+                        <% item.findings.forEach(finding => { %>
+                            <li><%= finding %></li>
+                        <% }); %>
+                    </ul>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+</body>
+</html>
